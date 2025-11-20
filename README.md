@@ -1,2 +1,2 @@
-# PsyLi_ja
-Psycholinguistic analysis of Japanese clinical notes 
+# bprs_ja
+LLM-based BPRS (Brief Psychiatric Rating Scale) rating
