@@ -1,0 +1,22 @@
+
+# YAML config for qwen3_vllm_inference_hpc_yaml.py
+
+model:
+  model_name: openai/gpt-oss-120b
+  model_dir: /PATH/MODEL_DIR
+  tensor_parallel_size: 4  
+  gpu_memory_utilization: 0.92
+  quantization:
+
+data:
+  dataset_name: ehr_processed_data.jsonl
+  dataset_dir: /PATH/DATA_DIR
+  hf_token: HF_TOKEN
+  split: train
+
+inference:
+  max_model_len: 32768
+  batch_size: 240
+  max_tokens: 1100
+  kv_quant: 
+
