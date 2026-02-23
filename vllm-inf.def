@@ -1,0 +1,14 @@
+Bootstrap: docker
+From: vllm/vllm-openai:v0.11.0
+
+%post
+	python3 -m pip install --upgrade pip
+    python3 -m pip install --no-cache-dir -U \
+        datasets transformers \
+        huggingface_hub pandas pyyaml
+    python3 -m pip uninstall -y pynvml
+	python3 -m pip install nvidia-ml-py 
+
+%labels
+    Version 0.2.1
+    Purpose vLLM batch inference
